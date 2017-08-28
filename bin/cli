@@ -1,0 +1,93 @@
+#!/usr/bin/env node
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
+const meow = require('meow');
+const parse = require('../index');
+
+const cli = meow(`
+  Extracts valuable information from Predix Design System Scss modules (flags,
+  variables, import statements) and makes it easy to print them to .scss
+  files for use when styling an app.
+
+  Commands
+    $ parse-px-scss imports -d [directory] -o [outfile]
+      Parses all Predix Design System Scss modules found in the directory and
+      prints out the import and flag statements to the scss file outfile.
+      If no outfile given, result will be piped to stdout.
+
+      Ex: $ parse-px-scss imports -d bower_components/ -o sass/app.scss
+
+    $ parse-px-scss variables -d [directory] -o [outfile]
+      Parses all Predix Design System Scss modules found in the directory and
+      prints out the available Scss variables to the scss file outfile.
+      If no outfile given, result will be piped to stdout.
+
+      Ex: $ parse-px-scss variables -d bower_components/ -o sass/_variables.scss
+
+  Options
+    -d, --directory  [required] Directory where the Predix Design System Scss modules were downloaded
+    -o, --outfile    [optional] Path to the file where the output should be printed
+    -f, --force      [optional] If outfile exists, it will be overwritten
+`,
+  {
+    alias: {
+      d: 'directory',
+      o: 'outfile',
+      f: 'force'
+    }
+  }
+);
+
+// directory required, throw an error if none given
+if (!cli.flags.directory || cli.flags.directory === '') {
+  throw new Error(`
+  Must pass the path to a directory where the Scss modules are stored.
+  Ex: $ parse-px-scss flags -d bower_components/ -o sass/app.scss
+`);
+}
+const moduleDir = getFullPath(cli.flags.directory);
+
+// if outfile given, check that it does not exist
+let logToStdout = true;
+let outfile;
+if (cli.flags.outfile && cli.flags.outfile !== '') {
+  logToStdout = false;
+  outfile = getFullPath(cli.flags.outfile);
+  const fileExists = fs.existsSync(outfile);
+  if (fileExists && !cli.flags.force) {
+    throw new Error(`
+  The outfile must not exist. Delete it or choose a new outfile, or use the -f
+  flag to force overwrite the existing file.
+  Outfile given: ${outfile}
+`);
+  }
+}
+
+if (cli.input[0] === 'imports') {
+  parse.getScssData(moduleDir).then(data => {
+    const scssText = parse.toScssImports(data);
+    if (logToStdout) {
+      console.log(scssText);
+    }
+    else {
+      fs.writeFileSync(outfile, scssText, {encoding:'utf8', flag:'w'});
+    }
+  });
+}
+else if (cli.input[0] === 'variables') {
+  parse.getScssData(moduleDir).then(data => {
+    const scssText = parse.toScssVariables(data);
+    if (logToStdout) {
+      console.log(scssText);
+    }
+    else {
+      fs.writeFileSync(outfile, scssText, {encoding:'utf8', flag:'w'});
+    }
+  });
+}
+
+function getFullPath(dirPath) {
+  return path.resolve(process.cwd(), dirPath);
+};

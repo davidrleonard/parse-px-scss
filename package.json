@@ -1,0 +1,14 @@
+{
+  "name": "parse-px-scss",
+  "version": "1.0.0",
+  "description": "Tools to help parse data from and generate files for Predix Design System Scss modules.",
+  "main": "index.js",
+  "author": "David R. Leonard",
+  "dependencies": {
+    "meow": "^3.7.0",
+    "sassdoc": "^2.3.0"
+  },
+  "bin": {
+    "parse-px-scss": "./bin/cli"
+  }
+}

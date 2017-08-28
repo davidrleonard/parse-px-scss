@@ -1,0 +1,290 @@
+// Settings
+
+/* px-defaults-design **************************************************************/
+$inuit-base-font-size        : 15px; 
+$inuit-base-line-height      : 20px; 
+$inuit-base-text-color       : var(--px-base-text-color,  rgb(44,64,76)); 
+$inuit-base-background-color : var(--px-base-background-color, rgb(255,255,255)); 
+$inuit-namespace             : null; 
+
+
+// Tools
+
+/* px-functions-design *************************************************************/
+$inuit-base-font-size : 15px; 
+
+/* px-widths-tools-design **********************************************************/
+$inuit-widths-namespace : $inuit-namespace; 
+
+
+// Generic
+
+/* px-helpers-design ***************************************************************/
+$breakpoints : (
+    // backwards compatible
+    "lap"              "screen and (min-width: 45em) and (max-width: 63.9375em)", // 675 - 960
+    "portable"         "screen and (max-width: 63.9375em)", // < 960
+    "desk"             "screen and (min-width: 64em)", // > 960
+
+    // recommended
+    "palm"             "screen and (max-width: 44.9375em)", // < 675
+    "lap-and-up"       "screen and (min-width: 45em)", // > 675
+    "desk-and-up"      "screen and (min-width: 64em)", // > 960
+    "large-and-up"     "screen and (min-width: 120em)", // > 1800
+    "retina"           "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)"
+); 
+
+
+// Base
+
+/* px-code-design ******************************************************************/
+$inuit-code-namespace    : $inuit-namespace; 
+$inuit-code-color        : var(--px-code-text-color, $primary-hover); 
+$inuit-code-background   : var(--px-code-background-color, $gray1); 
+$inuit-code-border-color : var(--px-code-border-color, transparent); 
+
+/* px-flexbox-design ***************************************************************/
+$inuit-flexbox-namespace : $inuit-namespace; 
+
+/* px-forms-design *****************************************************************/
+$inuit-forms-namespace                     : $inuit-namespace; 
+$inuit-forms-color                         : var(--px-input-text-color, $gray15); 
+$inuit-forms-label-color                   : var(--px-input-label-text-color, $gray10); 
+$inuit-forms-color--placeholder            : var(--px-input-text-color--placeholder, rgba($black,0.3)); 
+$inuit-forms-color--placeholder--focused   : var(--px-input-text-color--placeholder--focused, rgba($black,0.3)); 
+$inuit-forms-color--help                   : var(--px-input-text-color--help, $gray10); 
+$inuit-forms-background                    : var(--px-input-background-color, transparent); 
+$inuit-forms-background--hover             : var(--px-input-background-color--hover, $gray3); 
+$inuit-forms-border--outer                 : 1px solid var(--px-input-border-color--outer, $gray8); 
+$inuit-forms-color--focused                : var(--px-input-text-color--focused, inherit); 
+$inuit-forms-background--focused           : var(--px-input-background-color--focused, $primary-light); 
+$inuit-forms-border--outer--focused        : var(--px-input-border-color--outer--focused, $primary-default); 
+$inuit-forms-color--disabled               : var(--px-input-text-color--disabled, rgba($black,0.2)); 
+$inuit-forms-border--disabled              : var(--px-input-border-color--disabled, rgba($black,0.2)); 
+$inuit-forms-background--disabled          : var(--px-input-background-color--disabled, transparent); 
+$inuit-textarea-background--focused        : var(--px-input-textarea-background--focused, $primary-light); 
+$inuit-forms-select-color-svg              : #{$gray15}; 
+$inuit-forms-select-color-svg--disabled    : #{$gray4}; 
+$inuit-forms-select-color                  : var(--px-select-text-color, $gray15); 
+$inuit-forms-select-background             : var(--px-select-background-color, $gray3); 
+$inuit-forms-select-background--hover      : var(--px-select-background-color--hover, $gray6); 
+$inuit-forms-select-background--active     : var(--px-select-background-color--active, $gray8); 
+$inuit-forms-select-border                 : var(--px-select-border-color, transparent); 
+$inuit-forms-select-multiple-background    : var(--px-multiselect-background-color, $gray1); 
+$inuit-forms-validation-warning            : var(--px-validation-warning-text-color, $status-orange3); 
+$inuit-forms-validation-warning-background : var(--px-validation-warning-background-color, $status-orange1); 
+$inuit-forms-validation-error              : var(--px-validation-error-text-color, $status-red3); 
+$inuit-forms-validation-error-background   : var(--px-validation-error-background-color, $status-red1); 
+$inuit-forms-validation-success            : var(--px-validation-success-text-color, $status-green3); 
+$inuit-forms-validation-success-background : var(--px-validation-success-background-color, $status-green1); 
+$inuit-letter-spacing--caps                : var(--px-headings-letter-spacing, 0.3px); 
+
+/* px-headings-design **************************************************************/
+$inuit-headings-namespace            : $inuit-namespace; 
+$inuit-heading-size-1                : 75px; 
+$inuit-heading-size-2                : 60px; 
+$inuit-heading-size-3                : 45px; 
+$inuit-heading-size-4                : 30px; 
+$inuit-heading-size-5                : 20px; 
+$inuit-heading-size-6                : 12px; 
+$inuit-letter-spacing--caps          : var(--px-headings-letter-spacing, 0.3px); 
+$inuit-heading-page-color            : var(--px-headings-heading-page-color, $gray15); 
+$inuit-heading-section-color         : var(--px-headings-heading-section-color, $gray10); 
+$inuit-heading-subsection-color      : var(--px-headings-heading-subsection-color, $gray15); 
+$inuit-heading-subsection-background : var(--px-headings-heading-subsection-background, rgba($gray8,0.15)); 
+$inuit-heading-label-color           : var(--px-headings-label-color, $gray10); 
+$inuit-heading-value-color           : var(--px-headings-value-color, $gray15); 
+
+/* px-iconography-design ***********************************************************/
+$fa-font-path : "../font-awesome/fonts"; 
+
+/* px-tables-design ****************************************************************/
+$inuit-table-namespace         : $inuit-namespace; 
+$inuit-table-border-width      : 1px; 
+$inuit-table-border-style      : solid; 
+$inuit-table-border-color      : var(--px-table-border-color, $gray10); 
+$inuit-table-separator-color   : var(--px-table-separator-color, $gray5); 
+$inuit-table-header-text-align : left; 
+
+/* px-typography-design ************************************************************/
+$predix-font-family      : "GE Inspira Sans", sans-serif; 
+$predix-load-local-fonts : false; 
+$inuit-webfont-path      : '//dzlpbrbc7yvq0.cloudfront.net/predixdev/fonts/2.0.0'; 
+
+/* px-viewport-design **************************************************************/
+$desk-wide-width     : 100%; 
+$desk-wide-max-width : 80rem; 
+$viewport-margin     : auto; 
+$breakpoints         : (
+    // backwards compatibility
+    "lap"           "screen and (min-width: 48rem) and (max-width: 63.9rem)", // 720 - 960
+    "portable"      "screen and (max-width: 63.9rem)", // < 960
+    "desk"          "screen and (min-width: 63.9rem)", // > 960
+    "desk-wide"     "screen and (min-width: #{$desk-wide-width})",
+
+    // recommended
+    "palm"             "screen and (max-width: 47.9em)", // < 720
+    "lap-and-up"       "screen and (min-width: 48em)", // > 720
+    "desk-and-up"      "screen and (min-width: 64em)", // > 960
+    "large-and-up"     "screen and (min-width: 120em)", // > 1800
+    "retina"           "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)"
+); 
+
+
+// Meta
+
+
+// Objects
+
+/* px-actionable-design ************************************************************/
+$inuit-actionable-text-color             : var(--px-actionable-text-color, $primary-default); 
+$inuit-actionable-text-color--hover      : var(--px-actionable-text-color--hover, $primary-hover); 
+$inuit-actionable-text-color--active     : var(--px-actionable-text-color--active, $primary-pressed); 
+$inuit-selectable-text-color             : var(--px-selectable-text-color, $select-default); 
+$inuit-selectable-text-color--hover      : var(--px-selectable-text-color--hover, $select-hover); 
+$inuit-selectable-text-color--active     : var(--px-selectable-text-color--active, $select-pressed); 
+$inuit-actionable-alt-text-color         : var(--px-actionable-alt-text-color, $gray15); 
+$inuit-actionable-alt-text-color--hover  : var(--px-actionable-alt-text-color--hover, $primary-default); 
+$inuit-actionable-alt-text-color--active : var(--px-actionable-alt-text-color--active, $primary-pressed); 
+$inuit-actionable-disabled-text-color    : var(--px-actionable-disabled-text-color, rgba($black, 0.3)); 
+
+/* px-box-design *******************************************************************/
+$inuit-box-namespace : $inuit-namespace; 
+
+/* px-button-group-design **********************************************************/
+$inuit-btn-group-namespace    : $inuit-namespace; 
+$inuit-btn-group-color        : var(--px-btn-group-text-color, $white); 
+$inuit-btn-group-background   : var(--px-btn-group-background-color, $select-default); 
+$inuit-btn-group-border-color : var(--px-btn-group-border-color, transparent); 
+
+/* px-buttons-design ***************************************************************/
+$inuit-btn-namespace                          : $inuit-namespace; 
+$inuit-btn-color                              : var(--px-btn-color, $gray15); 
+$inuit-btn-background                         : var(--px-btn-background, $gray3); 
+$inuit-btn-background--hover                  : var(--px-btn-background--hover, $gray6); 
+$inuit-btn-background--pressed                : var(--px-btn-background--pressed, $gray8); 
+$inuit-btn-border-color                       : var(--px-btn-border-color, transparent); 
+$inuit-btn-border-color--hover                : var(--px-btn-border-color--hover, transparent); 
+$inuit-btn-border-color--pressed              : var(--px-btn-border-color--pressed, transparent); 
+$inuit-btn-border                             : 1px solid; 
+$inuit-btn-shadow                             : var(--px-btn-shadow, none); 
+$inuit-btn-shadow--light                      : var(--px-btn-shadow--light, none); 
+$inuit-btn-height                             : var(--px-btn-height, 2em); 
+$inuit-btn-min-width                          : var(--px-btn-min-width, 4.6666666667em); 
+$inuit-btn-line-height--firefox               : 1.8em; 
+$inuit-btn-height--small                      : 1.6666666667em; 
+$inuit-btn-line-height--small--firefox        : 1.4em; 
+$inuit-btn-primary-color                      : var(--px-btn-primary-color, $white); 
+$inuit-btn-primary-background                 : var(--px-btn-primary-background, $gray14); 
+$inuit-btn-primary-background--hover          : var(--px-btn-primary-background--hover, $gray16); 
+$inuit-btn-primary-background--pressed        : var(--px-btn-primary-background--pressed, $gray18); 
+$inuit-btn-primary-border-color               : var(--px-btn-primary-border-color, transparent); 
+$inuit-btn-tertiary-color                     : var(--px-btn-tertiary-color, $primary-default); 
+$inuit-btn-tertiary-border                    : 1px solid; 
+$inuit-btn-tertiary-color--hover              : var(--px-btn-tertiary-color--hover, $primary-hover); 
+$inuit-btn-tertiary-color--pressed            : var(--px-btn-tertiary-color--pressed, $primary-pressed); 
+$inuit-btn-tertiary-background                : var(--px-btn-tertiary-background, $white); 
+$inuit-btn-tertiary-background--hover         : var(--px-btn-tertiary-background--hover, $gray4); 
+$inuit-btn-tertiary-background--pressed       : var(--px-btn-tertiary-background--pressed, $gray7); 
+$inuit-btn-tertiary-border-color              : var(--px-btn-tertiary-border-color, $gray8); 
+$inuit-btn-disabled-color                     : var(--px-btn-disabled-color, rgba($black,.2)); 
+$inuit-btn-disabled-border                    : 1px solid; 
+$inuit-btn-disabled-background                : var(--px-btn-disabled-background, transparent); 
+$inuit-btn-disabled-border-color              : var(--px-btn-disabled-border-color, rgba($black,.2)); 
+$inuit-btn-call-to-action-color               : var(--px-btn-call-to-action-color, $white); 
+$inuit-btn-call-to-action-border-color        : var(--px-btn-call-to-action-border-color, transparent); 
+$inuit-btn-call-to-action-background          : var(--px-btn-call-to-action-background, $primary-default); 
+$inuit-btn-call-to-action-background--hover   : var(--px-btn-call-to-action-background--hover, $primary-hover); 
+$inuit-btn-call-to-action-background--pressed : var(--px-btn-call-to-action-background--pressed, $primary-pressed); 
+$inuit-btn-icon-background                    : var(--px-btn-icon-background, transparent); 
+$inuit-btn-icon-border                        : var(--px-btn-icon-border, 0px solid); 
+$inuit-btn-bare-color                         : var(--px-btn-bare-color, $gray15); 
+$inuit-btn-bare-color--hover                  : var(--px-btn-bare-color--hover, $primary-default); 
+$inuit-btn-bare-color--pressed                : var(--px-btn-bare-color--pressed, $primary-pressed); 
+$inuit-primary-bare-color--visited            : var(--px-btn-primary-bare-color--visited, $primary-default); 
+$inuit-primary-bare-color--hover              : var(--px-btn-primary-bare-color--hover, $primary-hover); 
+$inuit-primary-bare-color--pressed            : var(--px-btn-primary-bare-color--pressed, $primary-pressed); 
+$inuit-global-border-box                      : false; 
+
+/* px-flag-design ******************************************************************/
+$inuit-flag-namespace   : $inuit-namespace; 
+$inuit-flag-collapse-at : calculateRem(720px); 
+
+/* px-layout-design ****************************************************************/
+$inuit-layout-namespace : $inuit-namespace; 
+$inuit-layout-min-width : 300px; 
+
+/* px-list-bare-design *************************************************************/
+$inuit-list-bare-namespace : $inuit-namespace; 
+
+/* px-list-inline-design ***********************************************************/
+$inuit-list-inline-namespace         : $inuit-namespace; 
+$inuit-list-inline-delimit-character : "|"; 
+
+/* px-list-ui-design ***************************************************************/
+$inuit-list-ui-namespace       : $inuit-namespace; 
+$inuit-list-ui-border-width    : 1px; 
+$inuit-list-ui-border-style    : solid; 
+$inuit-list-ui-border-color    : var(--px-list-ui-border-color, $gray10); 
+$inuit-list-ui-separator-color : var(--px-list-ui-separator-color, $gray5); 
+
+/* px-shadows-design ***************************************************************/
+$inuit-shadows-namespace   : $inuit-namespace; 
+$inuit-shadow-component    : 0px 1px 1px var(--px-shadow-component, rgba($black, .2)); 
+$inuit-shadow-temporary    : 0px 1px 3px var(--px-shadow-temporary, rgba($black, .2)); 
+$inuit-shadow-navigation   : 0px 2px 4px var(--px-shadow-navigation, rgba($black, .2)); 
+$inuit-shadow-notification : 0px 4px 8px var(--px-shadow-notification, rgba($black, .2)); 
+$inuit-shadow-modal        : 0px 6px 12px var(--px-shadow-modal, rgba($black, .2)); 
+
+/* px-toggle-design ****************************************************************/
+$inuit-toggle-namespace                               : $inuit-namespace; 
+$inuit-toggle__background--checked                    : var(--px-toggle__background--checked, $primary-default); 
+$inuit-toggle__background--checked--hover             : var(--px-toggle__background--checked--hover, $primary-hover); 
+$inuit-toggle__background--checked--pressed           : var(--px-toggle__background--checked--pressed, $primary-pressed); 
+$inuit-toggle__background--checked--disabled          : var(--px-toggle__background--checked--disabled, rgba($black,0.2)); 
+$inuit-toggle__background--unchecked                  : var(--px-toggle__background--unchecked, $gray3); 
+$inuit-toggle__background--unchecked--hover           : var(--px-toggle__background--unchecked--hover, $gray5); 
+$inuit-toggle__background--unchecked--pressed         : var(--px-toggle__background--unchecked--pressed, $gray9); 
+$inuit-toggle__background--unchecked--disabled        : var(--px-toggle__background--unchecked--disabled, $white); 
+$inuit-toggle__background-border--unchecked           : var(--px-toggle__background-border--unchecked, $gray8); 
+$inuit-toggle__background-border--unchecked--hover    : var(--px-toggle__background-border--unchecked--hover, $gray10); 
+$inuit-toggle__background-border--unchecked--pressed  : var(--px-toggle__background-border--unchecked-pressed, $gray12); 
+$inuit-toggle__background-border--unchecked--disabled : var(--px-toggle__background-border--unchecked--disabled, rgba($black,0.2)); 
+$inuit-toggle__switch                                 : var(--px-toggle__switch, $white); 
+$inuit-toggle__switch--hover                          : var(--px-toggle__switch--hover, $gray4); 
+$inuit-toggle__switch--pressed                        : var(--px-toggle__switch--pressed, $gray7); 
+$inuit-toggle__switch--disabled                       : var(--px-toggle__switch--disabled, $white); 
+$inuit-toggle__switch-border                          : var(--px-toggle__switch-border, $gray8); 
+$inuit-toggle__switch-border--hover                   : var(--px-toggle__switch-border--hover, $gray8); 
+$inuit-toggle__switch-border--pressed                 : var(--px-toggle__switch-border--pressed, $gray8); 
+$inuit-toggle__switch-border--disabled                : var(--px-toggle__switch-border--disabled, rgba($black,0.2)); 
+$inuit-toggle__switch-shadow                          : 0px 1px 2px var(--px-toggle__switch-shadow-color, rgba($black, .15)); 
+
+
+// Components
+
+
+// Trumps
+
+/* px-spacing-design ***************************************************************/
+$inuit-spacing-namespace : $inuit-namespace; 
+
+/* px-widths-design ****************************************************************/
+$inuit-widths-columns : (
+    1,
+    2,
+    3,
+    4,
+    6
+); 
+
+/* px-widths-responsive-design *****************************************************/
+$inuit-widths-columns-responsive : (
+    1,
+    2,
+    3,
+    4,
+    6,
+); 
+
+
